@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sumi's contacts</title>
+    <link rel="icon" type="image/x-icon" href="pictures/logo.png">
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo-box">
+            <a href="index.html">S U<br>M I</a>
+        </div>
+        <div class="menu-toggle">
+            <p id="menu-open">ME<br>NU</p>
+            <p id="menu-close" style="opacity: 0;">✕</p>
+        </div>
+    </nav>
+
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-links">
+                <div class="link"><a href="index.html">> HOME</a></div>
+                <div class="link"><a href="academics.html">> ACADEMICS</a></div>
+                <div class="link"><a href="contact.html">> CONTACT</a></div>
+                <div class="link"><p id="coloursbutton">> COLOURS</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="letter">L</div>
+        <div class="letter">E</div>
+        <div class="letter">T</div>
+        <div class="letter">'</div>
+        <div class="letter">S</div>
+        <div></div>
+        <div class="letter">C</div>
+        <div class="letter">O</div>
+        <div class="letter">N</div>
+        <div class="letter">N</div>
+        <div class="letter">E</div>
+        <div class="letter">C</div>
+        <div class="letter">T</div>
+        <div class="letter">!</div>
+    </div>
+
+    <div class="contact">
+        <div class="text">
+            <h3>CONTACT</h3>
+            <br>
+            > <span class="contactspan">sumithra13022004@gmail.com</span><br>
+            > <span class="contactspan">+91 8089748709</span><br><br>
+
+            <h3>SOCIALS</h3>
+            <br>
+            > <a href="https://www.instagram.com/sumithra.jpg" target="_blank" rel="noopener"><span
+                    class="socialspan">INSTAGRAM</span></a><br>
+            > <a href="https://www.linkedin.com/in/sumithras" target="_blank" rel="noopener"><span
+                    class="socialspan">LINKEDIN</span></a><br>
+            > <a href="https://github.com/sumi-devs" target="_blank" rel="noopener"><span
+                    class="socialspan">GITHUB</span></a><br>
+            > <a href="https://app.thestorygraph.com/profile/notsumi" target="_blank" rel="noopener"><span
+                    class="socialspan">STORYGRAPH</span></a><br>
+
+        </div>
+
+        <div class="guest">
+            <h3>GUEST BOOK</h3>
+            <br>
+            <div class="sent">
+                <form id="guestbook">
+                    <input type="text" id="name" placeholder="Name" required><br>
+                    <textarea id="area" placeholder="Leave a message!"></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-wrap">
+        <h3>☆ MESSAGES ☆</h3>
+        <div id="messages"></div>
+    </div>
+
+    <footer>
+        <p>Thank you for visiting!</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <script src="contact.js"></script>
+</body>
+
+</html>

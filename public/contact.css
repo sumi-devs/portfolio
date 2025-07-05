@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e1c9;
+    background-image:
+        linear-gradient(#00000010 1px, transparent 1px),
+        linear-gradient(90deg, #00000010 1px, transparent 1px);
+    background-size: 50px 50px;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    padding: 2.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background: transparent;
+}
+
+nav a {
+    color: #e6e1c9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo-box {
+    color: #e6e1c9;
+    background-color: #0f0f0f;
+    padding: 6px 13px;
+    transform: translate(10px, 10px);
+}
+
+.logo-box a {
+    font-weight: normal;
+}
+
+.menu-toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-toggle p {
+    position: absolute;
+    transition: opacity 0.3s ease;
+    margin: 0;
+    color: #e6e1c9;
+    text-align: justify;
+    background-color: #0f0f0f;
+    padding: 6px 13px;
+    transform: translate(-31px, 0px);
+}
+
+#menu-close {
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #e6e1c9;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f0f0f;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+.menu-overlay.open {
+    transform: translateX(0);
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.link a,
+.link p {
+    color: #e6e1c9;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+.link a:hover,
+.link p:hover {
+    color: #f71e95;
+}
+
+.grid-container {
+    margin: 150px 50px 50px 50px;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    grid-auto-rows: 50px;
+}
+
+.letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f0f0f;
+    font-size: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 0px 50px 50px 50px;
+    flex-direction: row;
+}
+
+.text,
+.guest {
+    flex: 1 1;
+    background: transparent;
+    color: #0f0f0f;
+    padding: 1.5em;
+    font-size: x-large;
+    width: 100%;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0f0f0f;
+}
+
+.text a {
+    text-decoration: none;
+    color: #0f0f0f;
+}
+
+.text:hover,
+.guest:hover {
+    background-color: #00000099;
+    color: #e6e1c9;
+
+    .socialspan,
+    .contactspan {
+        background-color: #e6e1c9a6;
+        color: #00000099;
+    }
+
+    #guestbook button {
+        background-color: #e6e1c9a6;
+        color: #0f0f0f;
+    }
+
+    #name,
+    #area {
+        border-color: #e6e1c9a6;
+    }
+}
+
+.message-wrap {
+    font-size: x-large;
+    margin: 20px 50px 50px 50px;
+}
+
+#messages {
+    word-wrap: break-word;
+    font-size: x-large;
+    padding: 1.5em;
+    border: 1px solid #0f0f0f;
+    width: 93vw;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    max-height: 400px;
+    margin-top: 20px;
+}
+
+textarea,
+#name {
+    background: transparent;
+    width: 100%;
+    font-family: 'Railway', sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    border: 1px solid #0f0f0f;
+    padding: 10px;
+}
+
+textarea {
+    height: 180px;
+}
+
+#name {
+    height: 30px;
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+#guestbook button {
+    margin-top: 20px;
+    background: transparent;
+    width: 100px;
+    height: 50px;
+    border: 1px solid #0f0f0f;
+    font-size: x-large;
+}
+
+.contactspan {
+    background-color: #f71e9539;
+}
+
+.socialspan {
+    background-color: #e9f71e39;
+}
+
+footer {
+    color: #0f0f0f;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .menu-overlay {
+        width: 48.5vw;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .grid-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .text,
+    .guest {
+        width: 100%;
+        height: auto;
+    }
+}

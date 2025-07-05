@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e1c9;
+    background-image:
+        linear-gradient(#00000010 1px, transparent 1px),
+        linear-gradient(90deg, #00000010 1px, transparent 1px);
+    background-size: 50px 50px;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    padding: 2.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background: transparent;
+}
+
+nav a {
+    color: #e6e1c9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo-box {
+    color: #e6e1c9;
+    background-color: #0f0f0f;
+    padding: 6px 13px;
+    transform: translate(10px, 10px);
+}
+
+.logo-box a {
+    font-weight: normal;
+}
+
+.menu-toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-toggle p {
+    position: absolute;
+    transition: opacity 0.3s ease;
+    margin: 0;
+    color: #e6e1c9;
+    text-align: justify;
+    background-color: #0f0f0f;
+    padding: 6px 13px;
+    transform: translate(-31px, 0px);
+}
+
+#menu-close {
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #e6e1c9;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f0f0f;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+.menu-overlay.open {
+    transform: translateX(0);
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.link a,
+.link p {
+    color: #e6e1c9;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+.link a:hover,
+.link p:hover {
+    color: #f71e95;
+}
+
+.grid-container,
+.grid-container2 {
+    margin-left: 50px;
+    margin-right: 50px;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    grid-auto-rows: 50px;
+}
+
+.grid-container {
+    margin-top: 150px;
+}
+
+.grid-container2 {
+    margin-bottom: 50px;
+}
+
+.letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f0f0f;
+    font-size: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.projects {
+    font-size: x-large;
+    margin: 0px 50px 50px 50px;
+    display: flex;
+    gap: 2em;
+    flex-direction: row;
+}
+
+.aboutspan {
+    background-color: #00000099;
+    color: #e6e1c9;
+}
+
+.colourspan {
+    color: #ff2888fc;
+}
+
+.amritaclubs,
+.inception {
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    flex: 1;
+}
+
+.amritaclubs:hover,
+.inception:hover {
+    background-color: #00000099;
+    color: #e6e1c9;
+
+    .aboutspan {
+        background-color: #e6e1c9a6;
+        color: #00000099;
+    }
+}
+
+.inception a {
+    text-decoration: none;
+}
+
+footer {
+    color: #0f0f0f;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.carousel {
+    border: 1px solid #0f0f0f;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f480c0bd;
+    border: 1px solid #f480c0bd;
+    color: #e6e1c9;
+    font-size: 2rem;
+    padding: 0.05em 0.2em;
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: #0f0f0f;
+}
+
+.accordions {
+    padding-top: 1.5em;
+    border-top: 1px solid #0f0f0f;
+    border-left: 1px solid #0f0f0f;
+    border-right: 1px solid #0f0f0f;
+    margin: 0px 50px 50px 50px;
+}
+
+.accordions h2 {
+    margin-bottom: 10px;
+    padding: 0 0.6em;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #0f0f0f;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-toggle,
+.accordion-link {
+    background: none;
+    border: 1px solid #0f0f0f;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.accordion-link {
+    background: none;
+    border: 1px solid #0f0f0f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.accordion-link a {
+    text-decoration: none;
+    color: #0f0f0f;
+}
+
+.accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    padding: 0 1em;
+}
+
+.accordion-item.open .accordion-toggle {
+    background: #0f0f0f;
+    color: #e6e1c9;
+}
+
+@media (min-width: 800px) {
+    .menu-overlay {
+        width: 48.5vw;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .grid-container,
+    .grid-container2 {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .projects {
+        flex-direction: column;
+    }
+
+    .amritaclubs,
+    .inception {
+        width: 100%;
+        height: auto;
+    }
+}
