@@ -271,10 +271,10 @@ footer {
 
 @media (max-width: 500px) {
     #messages {
-        width: 85%;
+        width: 90%;
     }
     .contact {
-        width: 70%;
+        width: 73%;
     }
 
     .grid-container {
