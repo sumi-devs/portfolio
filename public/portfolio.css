@@ -214,7 +214,7 @@ nav a {
 
 .text,
 .picture {
-    flex: 1 1 30%;
+    flex: 1;
     min-width: 250px;
 }
 
@@ -266,9 +266,10 @@ nav a {
 }
 
 .tech-stack {
-    margin: 50px 50px 50px 50px;
+    margin: 0px 50px 20px 50px;
     border: 1px solid #0f0f0f;
     padding: 10px;
+    font-size: large;
 }
 
 .tech-stack:hover {
