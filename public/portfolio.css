@@ -214,7 +214,7 @@ nav a {
 
 .text,
 .picture {
-    flex: 1;
+    flex: 1 1 30%;
     min-width: 250px;
 }
 
@@ -222,7 +222,11 @@ nav a {
     background: transparent;
     color: #0f0f0f;
     padding: 1.5em;
-    font-size: x-large;
+    box-sizing: border-box;
+}
+
+.text p {
+    font-size: 22px;
 }
 
 .text,
