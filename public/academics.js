@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     letters.forEach((letter, index) => {
-        const colour = colours[index % colours.length];
+        const colour = colours[Math.floor(Math.random() * colours.length)];
 
         letter.addEventListener("mouseenter", () => {
             if (isColour[index]) {

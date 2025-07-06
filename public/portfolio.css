@@ -288,7 +288,7 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .intro {
+    .intro, .education {
         flex-direction: column;
     }
 
