@@ -265,6 +265,29 @@ nav a {
     transform: scale(1.05);
 }
 
+.tech-stack {
+    margin: 50px 50px 50px 50px;
+    border: 1px solid #0f0f0f;
+    padding: 10px;
+}
+
+.tech-stack:hover {
+    background-color: #00000099;
+    color: #e6e1c9;
+}
+
+.techs img {
+    width: auto;
+    height: 40px;
+}
+
+.techs {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 footer {
     color: #0f0f0f;
     text-align: center;
@@ -288,7 +311,9 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .intro, .education {
+
+    .intro,
+    .education {
         flex-direction: column;
     }
 
