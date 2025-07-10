@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html, body, #root, .default, .alt {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: grid;
     height: 100%;
@@ -22,6 +27,8 @@ body {
 }
 
 nav {
+    top: 0;
+    left: 0;
     position: fixed;
     width: 100vw;
     padding: 2.5em;
@@ -125,10 +132,12 @@ nav a {
     display: grid;
     grid-template-columns: repeat(auto-fill, 50px);
     grid-auto-rows: 50px;
+    gap: 0;
 }
 
 .grid-container {
     margin-top: 150px;
+    margin-bottom: 0;
 }
 
 .grid-container2 {
@@ -213,7 +222,8 @@ nav a {
 }
 
 .text,
-.picture {
+.picture1,
+.picture2 {
     flex: 1 1 30%;
     min-width: 250px;
 }
@@ -230,7 +240,8 @@ nav a {
 }
 
 .text,
-.picture img {
+.picture1 img,
+.picture2 img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -270,9 +281,9 @@ nav a {
 }
 
 .tech-stack {
-    margin: 20px 50px 20px 50px;
+    margin: 0px 50px 50px 50px;
     border: 1px solid #0f0f0f;
-    padding: 10px;
+    padding: 20px;
     font-size: large;
 }
 
@@ -316,10 +327,13 @@ footer {
 }
 
 @media (max-width: 800px) {
-
-    .intro,
-    .education {
+    .intro, .education {
         flex-direction: column;
+    }
+
+    .picture1, 
+    .picture2 {
+        display: none;
     }
 
     .professional,

@@ -118,7 +118,7 @@ nav a {
     color: #f71e95;
 }
 
-.grid-container {
+.grid-container-contact {
     margin: 150px 50px 50px 50px;
     background: transparent;
     display: grid;
@@ -147,7 +147,7 @@ nav a {
 .text,
 .guest {
     word-wrap: break-word;
-    flex: 1 1;
+    flex: 1;
     background: transparent;
     color: #0f0f0f;
     padding: 1.5em;
@@ -200,7 +200,6 @@ nav a {
     height: 500px;
     overflow-y: scroll;
     overflow-x: auto;
-    max-height: 500px;
     margin-top: 20px;
 }
 
@@ -255,47 +254,8 @@ footer {
     }
 }
 
-@media (max-width: 750px) {
-
-    .grid-container {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
-
 @media (max-width: 800px) {
     .contact {
         flex-direction: column;
-    }
-}
-
-@media (max-width: 500px) {
-    #messages {
-        width: 90%;
-<<<<<<< HEAD
-    }
-    .contact {
-        width: 73%;
-    }
-
-    .grid-container {
-        margin-right: 100px;
-    }
-
-    footer p {
-        margin-right: 50px;
-=======
->>>>>>> ed55a1b9437b03903b3799eee9d462dd2d5a2b76
-    }
-    .contact {
-        width: 73%;
-    }
-
-    .grid-container {
-        margin-right: 100px;
-    }
-
-    footer p {
-        margin-right: 50px;
     }
 }
