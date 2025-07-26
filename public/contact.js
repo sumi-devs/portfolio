@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.getElementById("menu-close");
     const letters = document.querySelectorAll(".letter");
 
+    const THEME_KEY = 'themeIndex'; // current theme
+
     let isOpen = false;
 
     menuToggle.addEventListener("click", () => {
@@ -156,9 +158,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const namecolours = [
-        "#264653", "#2a9d8f", "#e76f51", "#f4a261", 
-        "#e63946", "#8ecae6", "#219ebc", "#ffb703", 
-        "#fb8500", "#6d597a", "#8338ec", "#3a0ca3", 
+        "#264653", "#2a9d8f", "#e76f51", "#f4a261",
+        "#e63946", "#8ecae6", "#219ebc", "#ffb703",
+        "#fb8500", "#6d597a", "#8338ec", "#3a0ca3",
         "#ff006e"
     ];
 
@@ -212,12 +214,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
 
-    let currentTheme = 0;
-    const button = document.getElementById("coloursbutton");
+    let currentTheme = -1;
 
-    button.addEventListener("click", () => {
-        currentTheme = (currentTheme + 1) % themes.length;
-        const theme = themes[currentTheme];
+    function applyTheme(idx) {
+        const theme = themes[idx];
 
         document.body.style.backgroundColor = theme.background;
         document.body.style.color = theme.text;
@@ -234,10 +234,57 @@ document.addEventListener("DOMContentLoaded", () => {
             span.style.backgroundColor = theme.highlight;
             span.style.color = theme.background;
         });
+
         document.querySelectorAll(".letter").forEach(letter => {
             letter.style.color = theme.text;
         });
 
         document.body.style.backgroundImage = theme.lines;
+
+        localStorage.setItem(THEME_KEY, String(idx));
+    }
+
+    function resetToOriginal() {
+        document.body.style.backgroundColor = "";
+        document.body.style.color = "";
+        document.body.style.backgroundImage = "";
+
+        document.querySelectorAll(".menu-toggle p, .logo-box, .menu-overlay, a, .aboutspan, .socialspan, .contactspan, .letter")
+            .forEach(el => el.style.cssText = "");
+
+        localStorage.removeItem(THEME_KEY);
+    }
+
+    (function restoreThemeFromStorage() {
+        const saved = localStorage.getItem(THEME_KEY);
+        if (saved === null) return; // no saved => stay on original
+        const idx = parseInt(saved, 10);
+        if (Number.isNaN(idx) || idx < 0 || idx >= themes.length) {
+            resetToOriginal();
+            return;
+        }
+        currentTheme = idx;
+        applyTheme(currentTheme);
+    })();
+
+    const button = document.getElementById("coloursbutton");
+
+    button.addEventListener("click", () => {
+        // cycle through themes, then go back to original (index -1)
+        if (currentTheme === -1) {
+            currentTheme = 0;
+            applyTheme(currentTheme);
+            return;
+        }
+
+        currentTheme += 1;
+
+        if (currentTheme >= themes.length) {
+            resetToOriginal();
+            currentTheme = -1;
+            return;
+        }
+
+        applyTheme(currentTheme);
     });
 });
