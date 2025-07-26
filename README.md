@@ -1,4 +1,4 @@
-# 🌸 Portfolio Guestbook
+# 🌸 Portfolio 
 
 This is my personal portfolio website with a fun and creative UI as well as a guestbook where you can leave a message in the 'Contact' page!
 
