@@ -1,6 +1,6 @@
 const firebaseConfig = {
 
-    apiKey: "BMzaLyPB_uhFcclyLK6s9nlMLOHBOADQQB3efC0",
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 
     authDomain: "portfolio-guestbook-6d34c.firebaseapp.com",
 
